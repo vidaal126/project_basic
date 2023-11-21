@@ -1,0 +1,24 @@
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(74, 72, 72);
+}
+
+h1, h2{
+    color: white;
+    margin-left: 20px;
+}
+
+img{
+    width: 20%;
+    margin: auto;
+    display: block;
+}
+
+@media screen and (max-width: 650px){
+    
+}
