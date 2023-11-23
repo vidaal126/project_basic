@@ -20,5 +20,7 @@ img{
 }
 
 @media screen and (max-width: 650px){
-    
+    form {
+        flex-direction: column;
+    }
 }
