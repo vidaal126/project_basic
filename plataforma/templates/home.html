@@ -4,15 +4,36 @@
 
 {% block 'head' %}
 <link rel='stylesheet' href='{% static "css/home.css" %}'>
+<script src='{% static "js/custom.js" %}'></script>
 {% endblock 'head' %}
 
 {% block 'titulo' %}Home{% endblock 'titulo' %}
 
 {% block 'conteudo' %}
-<div>
+<div style='margin: 10px'>
     <h1>Bem vindo ao sistema!</h1>
     <h2>Página em construção</h2>
 </div>
 <img src='{% static "img/bmwM4.jpeg" %}'>
 <hr>
+<div class="messagem">
+    {% if messages %}
+        {% for i in messages %}
+            <div class="alert {{i.tags}}" role='alert'>
+                {{i}}
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>
+<div class="container-form">
+    <form action="{% url "home" %}" method="POST">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+        <hr>
+        <div class='botao'>
+            <input type="submit" class="btn btn-success">
+        </div>
+    </form>
+</div>
 {% endblock 'conteudo' %}

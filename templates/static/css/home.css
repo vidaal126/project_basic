@@ -19,6 +19,24 @@ img{
     display: block;
 }
 
+.container-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.messagem {
+    display: flex;
+    justify-content: center;
+}
+
+.botao {
+    display: flex;
+    justify-content: center;
+}
+
 @media screen and (max-width: 650px){
     form {
         flex-direction: column;
